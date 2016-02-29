@@ -114,10 +114,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="MNode.cpp" />
+    <ClInclude Include="MNode.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MNode.h" />
+    <ClCompile Include="MNode.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

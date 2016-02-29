@@ -1,3 +1,25 @@
+///////////////////////////////////////////////////////////////////////////
+//																		 //	
+//	File name: MNode.cpp												 //
+//	About: Implementating M-tree structure using MNode.h and testing	 //
+//	Author: Vishnu Dhanabalan											 //
+//	Email: vishnudhanabalan@outlook.com									 //
+//																	     //
+///////////////////////////////////////////////////////////////////////////
+
+/*
+Operation:
+----------
+	This file implements M-tree structure by using MNode.h header file.
+	It also defines the methods that are being declared in MNode.h file.
+	
+Maintenance history:
+--------------------
+	Version 1.0 | Initial commit -- 29 February 2016.
+		Details: Implemented basic tree structure methods, tested with few examples.
+
+*/
+
 #include <iostream>
 #include <string>
 #include "MNode.h"

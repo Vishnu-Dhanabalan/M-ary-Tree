@@ -1,10 +1,10 @@
 ///////////////////////////////////////////////////////////////////////////
-//																		 //	
-//	File name: MNode.cpp												 //
-//	About: Implementating M-tree structure using MNode.h and testing	 //
-//	Author: Vishnu Dhanabalan											 //
-//	Email: vishnudhanabalan@outlook.com									 //
-//																	     //
+//																		 	
+//	File name: MNode.cpp												 
+//	About: Implementating M-tree structure using MNode.h and testing	 
+//	Author: Vishnu Dhanabalan											 
+//	Email: vishnudhanabalan@outlook.com									 
+//																	     
 ///////////////////////////////////////////////////////////////////////////
 
 /*

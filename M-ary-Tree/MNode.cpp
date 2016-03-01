@@ -9,14 +9,25 @@
 
 /*
 Operation:
-----------
+==========
 	This file implements M-tree structure by using MNode.h header file.
 	It also defines the methods that are being declared in MNode.h file.
 	
 Maintenance history:
---------------------
+====================
+	Version 1.1	| 1 March 2016
+	--------------------------
+		Details: 1) Defined methods FindByID and FindByIDHelper for finding[1] any unique[2] node.
+				 2) Defined method returnID which returns an unique[2] ID of a node.
+	
 	Version 1.0 | Initial commit -- 29 February 2016.
+	------------------------------------------------
 		Details: Implemented basic tree structure methods, tested with few examples.
+
+References:
+===========
+	[1] Uses Preorder traversal operation.
+	[2]	No two nodes must have the same IDs. IDs are std::string type.
 
 */
 
@@ -56,6 +67,12 @@ std::vector<std::shared_ptr<MNode<T>>> MNode<T>::GetNodeChildren() {
 	return this->_children;
 }
 
+//<---- Return ID of any node ---->
+template <class T>
+std::string MNode<T>::returnID() { 
+	return this->_id;
+}
+
 //<---- Method for overloading []. Helps in indexing through node's children ---->
 template <class T>
 std::shared_ptr<MNode<T>>& MNode<T>::operator[](const size_t childrenId) {
@@ -63,6 +80,31 @@ std::shared_ptr<MNode<T>>& MNode<T>::operator[](const size_t childrenId) {
 		throw (std::invalid_argument("Invalid indexing number passed.\n"));
 
 	return this->_children[childrenId];
+}
+
+//<---- Method to find and return children as vector, using their ID ---->
+template <class T>
+std::shared_ptr<MNode<T>> MNode<T>::FindById(std::string ID) {
+	_foundNodes = nullptr;
+	for (auto pChild : _children) {
+		FindByIdHelper(pChild, ID);
+	}
+	return _foundNodes;
+}
+
+//<---- Helper method for finding children by it's ID ---->
+template <class T>
+void MNode<T>::FindByIdHelper(sPtr childPtr, std::string ID) {
+	if (_foundNodes != nullptr) {
+		return;
+	}
+	else if (childPtr->returnID() == ID) {
+		_foundNodes = childPtr;
+	}
+	else {
+		for (auto pChild : childPtr->_children)
+			FindByIdHelper(pChild, ID);
+	}
 }
 
 #ifdef _MNODE_MAIN_
@@ -109,6 +151,8 @@ int main(void) {
 
 	genNode& secondGeneration = *rootNode;		// Creating a raw pointer of rootNode to traverse through it's children.
 	secondGeneration[1]->AddChildren(e1_2_1, "1_2_1");		// Use overloaded [] operator for indexing and add the child.
+
+	sPtr foundNode = rootNode->FindById("1_2_1");		// Find a node with ID "1_2_1"
 
 	return 0;
 }

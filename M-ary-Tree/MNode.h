@@ -1,12 +1,12 @@
 #ifndef _MNODE_
 #define _MNODE_
 ///////////////////////////////////////////////////////////////////////////////////
-//																				 //	
-//	File name: MNode.h															 //
-//	About: Declaring template class MNode and it's member variables and methods	 //
-//	Author: Vishnu Dhanabalan													 //
-//	Email: vishnudhanabalan@outlook.com											 //
-//																				 //
+//																				 	
+//	File name: MNode.h															 
+//	About: Declaring template class MNode and it's member variables and methods	 
+//	Author: Vishnu Dhanabalan													 
+//	Email: vishnudhanabalan@outlook.com											 
+//					
 ///////////////////////////////////////////////////////////////////////////////////
 
 /*

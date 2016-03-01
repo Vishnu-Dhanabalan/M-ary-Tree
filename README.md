@@ -1,5 +1,7 @@
-# M-ary-Tree
-Implementation of general purpose M-ary tree.
+M-ary Tree:	
+===========
+Implement generic M-ary Tree. 
+
 
 Operation:
 ==========
@@ -7,6 +9,12 @@ Operation:
 
 Maintenance history:
 ====================
+	Version 1.2 | 1 March 2016
+	--------------------------
+		Details: 1) Modified constructors and AddChildren method to work with "_name" variable.
+				 2) Added methods show and ShowHelper for printing trees. 
+				 3) Added few example statements in main function.
+
 	Version 1.1	| 1 March 2016
 	--------------------------
 		Details: 1) Added methods FindByID and FindByIdHelper for finding[1] any unique[2] node.
@@ -15,6 +23,8 @@ Maintenance history:
 	Version 1.0 | Initial commit -- 29 February 2016.
 	-------------------------------------------------
 		Details: Created template class MNode and added it's member variables and methods.
+
+
 
 References:
 ===========
